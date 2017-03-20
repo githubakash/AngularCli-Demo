@@ -1,0 +1,46 @@
+<main class="container-fluid">
+        <section id="content" class="row">
+            <section id="primary-content" class="col-xs-12 col-lg-9">
+<div class="well-content">
+    <section>
+        <header>
+            <h1>List of Blogs</h1>
+                    </header>
+
+        <div class="contentitem" *ngFor="let blog of blogList">
+            <h2><a [routerLink]="['/blogdetail',blog.blogId]">{{blog.title}}</a></h2>
+            <div class="text-muted">Published on {{blog.publishedDate}}</div>
+          
+        </div>
+     
+    </section>
+
+</div>
+           </section>
+             <section id="rightSide-content" class="col-lg-3 col-xs-12">
+                <div class="well-content">
+                    <aside>
+                        <div>
+                       <img src="/src/app/images/akash.png" class="img-responsive img-thumbnail"/>
+                        </div>
+                        <p>Akash Agarwal</p>
+                        <a href="#">
+                            <p>View Full Profile</p>
+                        </a>
+                    </aside>
+                    
+                    <aside id="twitter-timeline">
+                        <p class="lead">Follow me on Twitter</p>
+                        <p>
+                   <a href="https://twitter.com/AkashAgarwal007" class="twitter-follow-button" data-show-count="false" height="300">Follow @AkashAgarwal007</a>
+                            <a class="twitter-timeline" href="https://twitter.com/AkashAgarwal007" height="300">Tweets by AkashAgarwal007</a>
+                            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        
+                        </p>
+                    </aside>
+                </div>
+
+
+            </section>
+            </section>
+               </main>

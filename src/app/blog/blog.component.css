@@ -1,0 +1,20 @@
+.contentitem {
+    margin: 0px;
+    padding: 10px;
+    border-bottom: 2px solid #dddddd;
+}
+
+    .contentitem > h2 > a {
+        font-size: 14px;
+        color: coral;
+    }
+
+
+.well-content {
+    background-color: #F2F2F2;
+    padding: 30px;
+    border: 1px solid #DADADA;
+    overflow: hidden;
+    border-radius: 10px 10px;
+    clear: both;
+}
