@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,ElementRef   } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -13,11 +13,16 @@ import { BlogdetailComponent } from './blog/blogdetail/blogdetail.component';
 
 import {AuthService} from './user/auth.service';
 import {BlogService} from './blog/shared/blog.service';
+import {ToastrService} from './shared/toastr.service';
 
 import {AppRoutes} from './app.route';
 import { LoginComponent } from './user/login/login.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { SignupComponent } from './user/signup/signup.component';
+
+import {MyHighlighterDirective} from './blog/my-highlighter.directive';
+import { ContactManagementComponent } from './ContactManagement/contactmamangement.component';
+import { SearchBlogComponent } from './blog/search-blog/search-blog.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,10 @@ import { SignupComponent } from './user/signup/signup.component';
     BlogdetailComponent,
     LoginComponent,
     ProfileComponent,
-    SignupComponent
+    SignupComponent,
+    MyHighlighterDirective,
+    ContactManagementComponent,
+    SearchBlogComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,7 @@ import { SignupComponent } from './user/signup/signup.component';
     HttpModule,
     RouterModule.forRoot(AppRoutes)
   ],
-  providers: [BlogService,AuthService],
+  providers: [BlogService,AuthService,ToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

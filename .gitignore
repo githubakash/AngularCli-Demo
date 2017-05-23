@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# I added this folder to check the prod and dev code after build
+/dev-dist-dev/
+/prod-dist-prod/
+
 # compiled output
 /dist
 /tmp

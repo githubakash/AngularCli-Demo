@@ -23,3 +23,5 @@ describe('BlogdetailComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+

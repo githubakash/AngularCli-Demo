@@ -37,8 +37,9 @@ module.exports = function (config) {
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
-    autoWatch: true,
-    browsers: ['Chrome'],
+    loggers:[{type:'console'}],
+     autoWatch: true,
+    browsers: ['Chrome',Firefox],
     singleRun: false
   });
 };

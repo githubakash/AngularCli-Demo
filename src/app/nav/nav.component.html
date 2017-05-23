@@ -19,13 +19,19 @@
                     <div class="collapse navbar-collapse navbar-right col-lg-6" id="navbar1">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#">Home</a></li>
-                            <li><a href="#">Quiz</a></li>
+                            
                             <li><a [routerLink]="['/blog']" routerLinkActive="activeRoute">Blog</a></li>
                              <li><a [routerLink]="['/create']" routerLinkActive="activeRoute">Create Blog</a></li>
-                            <li><a ui-sref="listVideos">Videos</a></li>
+                             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apps<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a [routerLink]="['/ContentMngt']" routerLinkActive="activeRoute">Contact Management</a></li>
+                      </ul>
+        </li>
+                            <!--li><a href="#">Videos</a></li-->
                             <li><a href="#">About</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <!--li><a href="#">Contact</a></li-->
                                <li><a [routerLink]="['/login']" routerLinkActive="activeRoute">Login</a></li>
+                                
                         </ul>
                     </div>
                 </div>

@@ -3,13 +3,22 @@
             <section id="primary-content" class="col-xs-12 col-lg-9">
 <div class="well-content">
     <section>
+        <div class="container-fluid">
+        <div class='row'>
+            <div class="col-lg-6">
         <header>
             <h1>List of Blogs</h1>
                     </header>
-
+                    </div>
+                 <div class="col-lg-6">
+                      <search-blog></search-blog>
+                 </div>
+                 </div>
+                   
+</div>
         <div class="contentitem" *ngFor="let blog of blogList">
             <h2><a [routerLink]="['/blogdetail',blog.blogId]">{{blog.title}}</a></h2>
-            <div class="text-muted">Published on {{blog.publishedDate}}</div>
+            <div appMyHighlighter [color]="'green'" class="text-muted">Published on {{blog.publishedDate}}</div>
           
         </div>
      
@@ -20,10 +29,11 @@
              <section id="rightSide-content" class="col-lg-3 col-xs-12">
                 <div class="well-content">
                     <aside>
-                        <div>
-                       <img src="/src/app/images/akash.png" class="img-responsive img-thumbnail"/>
-                        </div>
-                        <p>Akash Agarwal</p>
+                      <figure>
+                       <img src="/assets/images/akash.png" class="img-responsive img-thumbnail"/>
+                       <figcaption>Akash Agarwal</figcaption>
+                      </figure>
+                     
                         <a href="#">
                             <p>View Full Profile</p>
                         </a>
